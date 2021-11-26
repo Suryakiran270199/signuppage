@@ -1,0 +1,69 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.layout{
+    border: 1px outset ;
+    background-color: darkgray;
+    height:900px;
+    width: 100%;
+}
+.inside-layout{
+    border:1px outset ;
+    background-color: white;
+    height: 780px;
+    width:1600px;
+    margin-left: 120px;
+    margin-top: 60px;
+}
+h1{
+    color: rgba(29, 6, 145, 0.747);
+    font-size: 50px;
+    font-family: cursive;
+}
+h5{
+    margin-top:15px ;
+    color: tomato;
+}
+
+.signup-fields{
+    width: 270px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.form-control{
+    width: 270px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.row-last{
+    margin-top: 50px;
+}
+.col-signup{
+    margin-left: 100px;
+}
+.sign-up-layout, .sfr, .form-group, .form-check{
+    margin-top: 20px;
+}
+.btn{
+    height: 40px;
+    width: 200px;
+    background-color: darkgoldenrod;
+    color: white;
+    margin-top: 20px;
+}
+.logo{
+     height:780px;
+     width: 100%;
+
+}
+.head-logo{
+    height: 150px;
+    width: 300px;
+    margin-left: 120px;
+    margin-top: 20px;
+}
