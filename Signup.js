@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Signup.css';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
@@ -11,12 +11,29 @@ import headlogo from './headlogo.jpg';
 
 function Signup() {
 
+     const google=()=>{
+         window.open("http://localhost:2500/auth/google","_self")
+     }
+
+     const facebook = () => {
+        window.open("http://localhost:2500/auth/facebook", "_self");
+      };
+    
+
     const [data, setdata] = useState({
         name: "",
         email: "",
         password: "",
         checkbox: false,
     })
+
+    //  useEffect(() => {
+    //     axios.get('http://10.13.6.206:4001/Signup').then(response =>{
+    //          console.log(response)
+    //    }).catch(err =>{
+
+    //    })
+    // }, [])
 
     const changeHandler = (e) => {
         const name = e.target.name;
@@ -39,13 +56,13 @@ function Signup() {
             usercheck: data.checkbox
         }
 
-        axios.post("https://reactdata-6b0f8-default-rtdb.firebaseio.com/signup.json", sdata).then(responce => {
-            console.log(sdata)
-        }).catch(error => {
+         axios.post("http://10.13.6.206/4000/signup", sdata).then(response => {
+             console.log(response)
+           }).catch(error => {
 
-        })
-
+         })
     }
+    
     return (
         <div className="layout">
             <div className="inside-layout">
@@ -66,10 +83,10 @@ function Signup() {
 
                             <Row className="sfr">
                                 <Col>
-                                    <button className="signup-fields" > <FcGoogle size="20px" /> Sign up with google</button>
+                                    <button className="signup-fields" onClick={google} > <FcGoogle size="20px" /> Sign up with google</button>
                                 </Col>
                                 <Col>
-                                    <button className="signup-fields" > <FaFacebook color="blue" size="20px" /> Sign up with facebook</button>
+                                    <button className="signup-fields" onClick={facebook} > <FaFacebook color="blue" size="20px" /> Sign up with facebook</button>
                                 </Col>
                             </Row>
 
